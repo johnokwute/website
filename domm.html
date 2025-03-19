@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    
+<style>
+
+    .list{
+        list-style-type: none;
+    }
+
+    body{
+        background-color:beige;
+    }
+
+    .container1{
+        display: grid;
+        grid-template-columns: 200px 70px 800px;
+        
+        padding: 10px;
+        background-color: blue;
+        
+    }
+
+    .container2{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        padding: 10px;
+        background-color:brown;
+        
+    }
+
+    .container3{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        padding: 10px;
+        background-color:blueviolet;
+    }
+    
+
+    .container2>.container-sub2{
+        padding: 10px;
+        border: 1px solid gray;
+        font-size: 15px;
+        background-color:blanchedalmond;
+        text-align: center;
+
+    }
+
+    .container1 >.container-sub1{
+        padding: 10px;
+        border: 1px solid gray;
+        font-size: 15px;
+        background-color: yellow;
+        text-align: center;
+
+    }
+
+    .container3>.container-sub3{
+        padding: 10px;
+        border: 1px solid gray;
+        font-size: 15px;
+        background-color: yellow;
+        text-align: center;
+
+    }
+
+</style>
+
+
+<div class="container1">
+    <div class="container-sub1">
+        <ul class="list">
+            <li>link 1</li>
+            <li>link 2</li>
+            <li>link 3</li>
+            <li>link 4</li>
+            
+
+        </ul>
+    </div>
+    <div class="container-sub1">2</div>
+    <div class="container-sub1">3</div>
+    <div class="container-sub1">4</div>
+    <div class="container-sub1">5</div>
+    <div class="container-sub1">6</div>
+    <div class="container-sub1">7</div>
+    <div class="container-sub1">8</div>
+
+</div>
+
+
+<div class="container2">
+    <div class="container-sub2">1</div>
+    <div class="container-sub2">2</div>
+    <div class="container-sub2">3</div>
+    <div class="container-sub2">4</div>
+    <div class="container-sub2">5</div>
+    <div class="container-sub2">6</div>
+    <div class="container-sub2">7</div>
+    <div class="container-sub2">8</div>
+
+</div>
+
+<div class="container3">
+    <div class="container-sub3">1</div>
+    <div class="container-sub3">2</div>
+    <div class="container-sub3">3</div>
+    <div class="container-sub3">4</div>
+    <div class="container-sub3">5</div>
+    <div class="container-sub3">6</div>
+    <div class="container-sub3">7</div>
+    <div class="container-sub3">8</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.13/dayjs.min.js">
+    
+    
+</script>
+
+<script>
+    const thingx = dayjs();
+    console.log(dayjs());
+    
+   const pin = thingx.add(7, 'days');
+   console.log(pin.format('dddd mmmm, D'));
+</script>
+
+</body>
+</html>
+
+

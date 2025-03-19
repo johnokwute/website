@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+        }
+        .super-container{
+            display: flex;
+            background-color: gray;
+            margin: 0px;
+            height: 600PX;
+            padding: 0px;
+            flex-direction: row;
+            flex-wrap: nowrap;
+                        
+        }
+
+        .super-container .father-container{
+            display: flex;
+            background-color: wheat;
+            margin: 10px;
+            padding: 10px;
+            flex-direction: column;
+        }
+
+        .super-container .mother-container{
+            display: flex;
+            background-color: wheat;
+            margin: 20px;
+            padding: 10px;
+            flex-direction: row;
+            
+            
+        }
+
+        .super-container .father-container > .son-container{
+            padding: 10%;
+            margin: 10px;
+            color: black;
+            font-size: 10px;
+            
+            
+            
+        }
+
+        .super-container .mother-container > .daughter-container{
+            padding: 10px;
+            margin: 5px;
+            color: black;
+            font-size: 10px;  
+                    
+
+        }
+
+        .item1{
+            grid-area: header;
+            background-color: wheat;
+            text-align: center;
+        }
+
+        .item2{
+            grid-area: menu;          
+            
+        }
+        
+        .item3{
+            grid-area: main;
+            background-color: wheat;
+            
+        }
+
+
+        .item2 ul{
+            list-style-type: none;
+        }
+
+        .item2 ul li{
+            padding: 2px;
+            
+        }
+
+
+        .grid-container{
+            display: grid;
+            grid-template-areas: 'header header header header header'
+            'menu main main main main'
+            ;
+            background-color: brown;
+            gap: 10px;
+            padding: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="super-container">
+        <div class="father-container">
+            <div class="son-container">               
+                    <h1>MY NAME IS ZION</h1>
+                    <p>Story about zion will be told here. pls stay tuned</p> 
+           </div><!--end firat son container-->
+
+            <div class="son-container">               
+                <h1>MY NAME IS ZOE</h1>
+                <p>Story about zion will be told here. pls stay tuned <a href="/pp.html"><img src="/IMG_20240725_140001.jpg" style="width:200px"></a></p>   
+            </div><!--end second son container-->
+        </div>   <!--end father container-->
+
+
+            
+
+        <div class="mother-container">
+
+            <div class="daughter-container">               
+                <h1>MY NAME IS ZION</h1>
+                <p>Story about zion will be told here. pls stay tuned</p> 
+            </div>
+
+           <div class="daughter-container">               
+               <h1>MY NAME IS ZION</h1>
+               <p>Story about zion will be told here. pls stay tuned</p>   
+           </div>
+        </div>  
+    </div>
+
+
+    <div class="grid-container">
+
+        <div class="item1">
+            <h1>This is for grid container</h1>
+        </div>
+
+        <div class="item2">
+            <ul>
+                <li>name</li>
+                <li>age</li>
+                <li>sex</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <h1>name</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus laudantium dignissimos maxime exercitationem, vero rerum doloremque in labore aspernatur quo animi cumque aliquid nam. Ullam molestiae explicabo reiciendis unde excepturi.</p>
+            
+            <h1>age</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus laudantium dignissimos maxime exercitationem, vero rerum doloremque in labore aspernatur quo animi cumque aliquid nam. Ullam molestiae explicabo reiciendis unde excepturi.</p>
+        
+            <h1>sex</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus laudantium dignissimos maxime exercitationem, vero rerum doloremque in labore aspernatur quo animi cumque aliquid nam. Ullam molestiae explicabo reiciendis unde excepturi.</p>
+        </div>
+
+
+        <div class="item">
+            <p><footer></footer></p>
+        </div>
+    </div>
+
+   
+    
+</body>
+</html>

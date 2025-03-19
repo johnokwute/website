@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: orange;
+        }
+        *{
+            box-sizing: border-box;
+            margin: 0;
+
+            
+        }
+
+        .grid-container{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 0px;
+            
+            height: 400px;
+            
+        }
+
+
+        .grid-container > div{
+            padding: 10px;
+            font-size: 16px;
+            text-align: center;
+            
+            
+
+        }
+
+        .item1{
+            grid-column-start: 1;
+            grid-column-end: 6;
+            background-color: aqua;
+        }
+
+        .item2{
+            grid-row-start:2;
+            grid-row-end: 4;
+            background-color: aquamarine;
+            
+            
+        }
+
+        .item2 ul{
+            list-style-type: none;
+            text-align: justify;
+        }
+
+        .item2 ul li a{
+            text-decoration: none;
+            
+        }
+
+        .item2 ul li{
+            margin-bottom: 10px;
+            
+        }
+
+
+        .item3 {
+            grid-area: 3/2/3/6;
+            background-color: #242;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item1">EVERY GREAT END STARTS FROM LITTLE BIGINNING. TAKE IT VERY SERIOUSLY</div>
+        <div class="item2">
+            <ul>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Address</a></li>
+                <li><a href="">Informatiom</a></li>
+            </ul>
+
+            <img src="/abigail1.jpeg.JPG" alt="" style="max-width: 300px;">
+        </div>
+        <div><img src="/IMG_20240725_140001.jpg" alt="" style="max-width: 400px;"></div>
+        <div class="item3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse sapiente molestias nam velit magni iure porro delectus, doloribus perspiciatis at corporis illum sequi deserunt beatae corrupti sunt maiores totam. Beatae!</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        
+        
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body{
+            background-color: black;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            background-color: black;
+            padding: 10px;
+            border: none;
+            column-gap: 0px;
+            row-gap: 0px;
+        }
+
+        .container > div{
+            
+            border: none;
+            padding:10px;
+            font-size: 20px;
+            text-align: center;
+            
+            
+
+        }
+
+        .container > div .cs-buton{
+            background-color: gray;
+            border-radius: 870%;
+            padding: 6px;
+            font-size: 15px;
+            font-weight: 70%;
+            
+        }
+
+        .container > div .exceptionalcolor{
+            background-color:orange;
+            
+
+        }
+
+        .result{
+            color: white;
+            margin-left: 80px;
+            
+        }
+    </style>
+</head>
+<body>
+    <p class="result">Result</p>
+        <div class="container">
+            <div>
+                <button class="cs-buton" onclick="num(1)">1</button>
+            </div>
+            <div>
+                <button class="cs-buton" onclick="num(2)">2</button>
+            </div>
+            <div>
+                <button class="cs-buton" onclick="num(3)">3</button>
+            </div>
+            <div>
+                <button class="cs-buton exceptionalcolor" onclick="operator('+')">+</button>
+            </div>
+            <div>
+                <button class="cs-buton" onclick="num(4)">4</button>
+            </div>
+
+            <div>
+                <button class="cs-buton" onclick="num(5)">5</button>
+            </div>
+            <div>
+                <button class="cs-buton" onclick="num(6)">6</button>
+            </div>
+            <div>
+                <button class="cs-buton exceptionalcolor" onclick="operator('-')">-</button>
+            </div>
+            <div>
+                <button class="cs-buton" onclick="num(7)">7</button>
+            </div>
+            <div>
+                <button class="cs-buton" onclick="num(8)">8</button>
+            </div>
+
+            <div>
+                <button class="cs-buton" onclick="num(9)">9</button>
+            </div>
+            <div>
+                <button class="cs-buton exceptionalcolor" onclick="operator('*')">*</button>
+            </div>
+            <div>
+                <button class="cs-buton">0</button>
+            </div>
+            <div>
+                <button class="cs-buton">.</button>
+            </div>
+            <div>
+                <button class="cs-buton" onclick="getNum()">=</button>
+            </div>
+            <div>
+                <button class="cs-buton exceptionalcolor" onclick="operator('/')">/</button>
+            </div>
+
+            <div>
+                <button class="cs-buton">Clear</button>
+            </div>
+            <div>
+        </div>
+
+
+        <script>
+
+            const numArray = [];
+            numArrayResult <<- ''; 
+            let variable = '';           
+
+            function num(num){
+                numArray.push(num);   
+                                       
+            }  
+            
+            function operator(opt){
+                sum = '';
+
+                if (opt==='+'){
+
+                    for(i=0; i<numArray.length;i++){
+                        sum = sum + numArray[i];
+
+                    }
+                    numArrayResult = sum;
+                    
+                }
+                
+                
+
+                
+                
+            }
+
+            console.log(Number(numArrayResult)+1000);
+
+            
+                
+        
+            
+    
+        </script>
+
+       
+
+   
+</body>
+</html>

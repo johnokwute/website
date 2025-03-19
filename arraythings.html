@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            background-color:black;
+        }
+
+        .container > div{
+            
+
+        }
+    </style>
+
+    <script src="images.js"></script>
+</head>
+<body>
+
+    <div class="pic-array">
+        
+    </div>
+
+    <script>
+
+       
+let product = '';
+
+images.forEach((imagess) =>{
+    product += `<div class="sub-array">
+            <img src="${imagess.image}" alt="" width="100px">
+
+        </div>`;
+
+    document.querySelector('.pic-array').innerHTML = product;
+    
+
+})
+
+    </script>
+
+
+    
+
+    
+    
+</body>
+</html>

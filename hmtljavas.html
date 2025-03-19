@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script>
+        
+    </script>
+
+
+</head>
+<body>
+    <p id ="myd"></p>
+
+
+    <p id = "dem"></p>
+
+    <script type="module">
+        //import {message1, message2, ages} from "./message.js";
+        import msg from "./message.js";
+        
+        document.getElementById("dem").innerHTML = msg();
+        
+
+
+    </script>
+    <script>
+        
+
+        function person(name, sex, age, nationality){
+            this.name = name;
+            this.sex = sex;
+            this.age = age;
+            this.nationality=nationality;
+            this.fullname = function() {
+                return "identity of our customer  "+this.name+" "+sex+" "+age+"  "+nationality
+            };
+
+           
+        }
+
+        const john = new person("okwute john", "male",45,"Nigerian");
+
+        const cars = ["Honder Civic","Camery","Corolla","Benz","Toyata"]
+
+       
+
+        const person1 = {
+            name:"okwute",
+            sex:"male",
+            age:45,
+        };
+
+        let {name, sex} = person1;
+        
+        i = 90;
+
+        try{
+            
+            if(i===90) throw "number is greater less than 9";
+
+        }catch(err){
+            //document.getElementById(err)
+        }
+
+        let hell ="kill";
+
+        function helly(){
+           // document.write(hell);
+        }
+
+        helly();     
+        //document.write(message1+" "+message2)
+
+
+        class person2{
+            constructor(name, sex){
+                this.name=name;
+                this.sex=sex;
+
+            }
+
+            getname(){
+                return this.name;
+            }
+
+            getsex(){
+                return this.sex;
+            }
+
+            
+        }
+
+        class person3 extends person2{
+            constructor(age, nationality, name, sex){
+                super(name, sex);
+
+                this.age = age;
+                this.nationality = nationality;
+            }
+
+            getage(){
+                return this.age;
+            }
+
+            getnationality(){
+                return this.nationality;
+            }
+
+            getfullid(){
+                return " identity is "+this.getname()+" "+this.getage()+" "+this.getnationality()+" "+this.getsex();
+            }
+        }
+
+
+        let myid = new person3(25, "Nigerian", "okwute john", "male");
+        console.log(myid.getfullid());
+
+        document.getElementById("myd").innerHTML=myid.getfullid();
+       
+    </script>
+
+    
+    <p></p>
+    
+</body>
+</html>

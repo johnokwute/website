@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .rend{
+            border: none;
+            background-color: black;            
+            border-radius: 50px;
+            color: white;
+            padding: 15px;
+            font-size: 15px;
+            font-weight: 50px;
+            
+        }
+
+        .rendering{
+            color:blue;
+            font-size: 30px;
+            margin: 20px;
+            display: inline-block;
+            
+        }
+
+        .again{
+            background-color: rgb(77, 34, 34);
+            color: white;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="rendering"></div>
+
+    <button class="rend" onclick="renderfunc()">Render Elements On Page</button>
+
+    <script>
+        function renderfunc(){
+            const click= document.querySelector('.rendering');
+            click.innerHTML = `
+            <p class = "ren">${'One love'}</p>
+            <p>${'One love'}</p>
+            <button class = "again" onclick="
+            alert('i love my kids'))
+            
+
+            
+            ">Someh Thing Again</button>`;
+
+        }
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .inputss{
+            color: red;
+            text-align: center;
+            cursor:pointer;
+            
+        }
+       
+    </style>
+</head>
+
+<body>
+    <p>Todo List Practice 1</p>
+    <input type="text" class="inputss" onkeydown="todo_list_array(event)">
+    <button class="" c >Add</button>
+
+    <div class="displays"></div>
+    <input type="Date">
+
+    
+
+    <script>
+
+        todoList = [];       
+
+        let todoHTML = '';
+        let html = '';
+
+       
+        
+            
+            function todo_list_array(event){
+
+                if(event.key === 'Enter'){
+                    const todovalue = document.querySelector('.inputss');
+                    const toda_list_value = todovalue.value;
+                    todoList.push(toda_list_value ); 
+                    todovalue.value ='';
+                
+                    htmlList();
+
+                    
+                }
+           
+
+                
+                    
+            
+        }
+
+        function htmlList(){
+            
+
+            for(i=0; i < todoList.length; i++){
+                const num = todoList[i];
+                html = `<p >${num}</p>`
+                
+            }
+            todoHTML = todoHTML + html;  
+            const todothings = document.querySelector('.displays').innerHTML=todoHTML;
+    
+
+        }   
+        
+        
+        
+
+
+    </script>
+    
+</body>
+</html>
